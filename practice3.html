@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Password Practice!</h1>
+
+    <form>
+
+        <h1 id="password-output"></h1>
+
+        <p>Password: <input id="password-a" type="password"></p>
+        <p>Verify Password: <input id="password-b" type="password"></p>
+
+        <button type="button" onclick="verify_passwords()">Verify</button>
+
+    </form>
+
+    <script>
+        function verify_passwords() {
+            const password = document.getElementById('password-a').value;
+            const verify_password = document.getElementById('password-b').value;
+
+            let output = document.getElementById('password-output')
+
+            if (
+                password.length < 8 || verify_password.length < 8
+            ) {
+                output.style.color = "red";
+                output.innerHTML = "Passwords must be 8 characters or greater!"
+            } else if (
+                password !== verify_password
+            ) {
+                output.style.color = "red";
+                output.innerHTML = "Passwords must be matching!"
+            } else {
+                output.style.color = "black";
+                output.innerHTML= "passwords match!"
+            }
+        }
+    </script>
+
+</body>
+</html>

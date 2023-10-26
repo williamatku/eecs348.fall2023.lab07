@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Font Control</title>
+</head>
+<body>
+    <h1>Welcome to CSS Font Control Demo! Practice 2</h1>
+
+    <p
+            style="padding: 50px; margin: 50px; border-style: solid"
+            id="text-to-manip"
+            >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam nisi eu nibh eleifend, ullamcorper eleifend quam interdum. Integer porta felis sed nibh hendrerit volutpat. Nam consectetur ligula et felis tempus, dapibus fermentum nisi tincidunt. Duis maximus orci ac leo suscipit, id molestie nulla mollis. Cras aliquet eu purus nec tincidunt. Vivamus et tempor enim, a eleifend quam. Nulla auctor neque eu nisl sollicitudin porttitor. Ut tincidunt metus vitae metus consectetur, non dapibus magna efficitur. Maecenas dignissim quam non nunc aliquam, ac mattis eros rhoncus. Nam ex ligula, facilisis non metus eu, tempor tempor mauris. In tincidunt nec lacus sed ullamcorper.
+
+        Quisque pretium nulla eu quam rhoncus, in tempus nunc pellentesque. Cras rhoncus justo et eros accumsan, at accumsan metus mattis. Mauris interdum, lectus id varius vestibulum, erat quam euismod turpis, eu placerat sem lectus et dolor. Curabitur aliquam efficitur odio, ut venenatis enim mattis vel. Phasellus ex quam, malesuada at sodales ac, sollicitudin non augue. Nunc maximus tincidunt imperdiet. Vivamus posuere iaculis ligula, pharetra porta ex maximus sit amet. Donec quis nisi sed justo lacinia bibendum. Mauris a nisi ut lorem sagittis efficitur. Etiam ut libero arcu. Quisque vitae nibh sit amet leo suscipit euismod at ut enim. Cras lobortis aliquet felis sit amet gravida.
+
+        Sed sodales arcu quis enim fringilla blandit. Etiam pellentesque diam at ex vestibulum malesuada. Nulla tristique mattis dui, ac imperdiet elit convallis quis. Aliquam nec sodales libero. Duis volutpat ex at velit aliquet pretium non eu orci. Sed eu leo dignissim, ullamcorper nibh eget, semper ante. Nam enim velit, varius sed turpis nec, pretium maximus nisi. Nam at augue eu risus commodo ultricies. Nunc eu laoreet lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+        Proin id tellus vitae sapien consequat bibendum non eu nisi. Praesent condimentum enim dolor, ac tincidunt massa vestibulum vitae. Suspendisse metus justo, rhoncus at nunc at, aliquet hendrerit orci. Aenean sapien lorem, dictum in leo et, congue bibendum ex. Aliquam quis consequat lorem, ut sollicitudin quam. Cras nec ornare dolor, eget consequat turpis. Morbi eleifend nibh massa, a varius odio efficitur vitae. Cras tempor turpis vitae urna varius, at condimentum nisi sodales. Duis hendrerit massa vel euismod dapibus. Suspendisse sit amet diam sapien. Maecenas vitae auctor magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat pharetra nunc, id dignissim eros sagittis vel. Vivamus quis erat sed nisl pellentesque bibendum. Vestibulum vitae eros vitae leo ultrices lacinia sit amet in eros. Maecenas maximus elit est, quis egestas elit fermentum sit amet.
+
+        Mauris molestie felis eu lorem bibendum, eget commodo justo hendrerit. Aliquam turpis turpis, porta vitae dapibus et, euismod non purus. Nam vehicula id magna vel tincidunt. Nullam elementum laoreet tellus, eget rutrum ante efficitur vel. Sed ac finibus turpis. Maecenas porta eros eget nibh venenatis dictum. Phasellus molestie sem non urna tincidunt tempor in varius sapien. In semper lacinia mattis. Vestibulum cursus nunc vel orci pulvinar luctus.
+    </p>
+
+    <form>
+        <p>R: <input id="color-text-r"></p>
+        <p>G: <input id="color-text-g"></p>
+        <p>B: <input id="color-text-b"></p>
+
+        <p>R: <input id="color-border-r"></p>
+        <p>G: <input id="color-border-g"></p>
+        <p>B: <input id="color-border-b"></p>
+
+        <p>Border Width: <input id="width-border"></p>
+
+        <button type="button" onclick="update_border_props()">Update</button>
+
+    </form>
+
+    <script>
+        function update_border_props() {
+            console.log("clicked")
+
+            const text_r = document.getElementById('color-text-r').value;
+            const text_g = document.getElementById('color-text-g').value;
+            const text_b = document.getElementById('color-text-b').value;
+
+            const border_r = document.getElementById('color-border-r').value;
+            const border_g = document.getElementById('color-border-g').value;
+            const border_b = document.getElementById('color-border-b').value;
+
+            const border_width = document.getElementById('width-border').value;
+
+
+            let paragraph = document.getElementById('text-to-manip');
+
+            paragraph.style.color = `rgb(${text_r},${text_g},${text_b})`;
+            paragraph.style.borderColor = `rgb(${border_r},${border_g},${border_b})`;
+            paragraph.style.borderWidth = `${border_width}px`;
+        }
+
+    </script>
+</body>
+</html>
