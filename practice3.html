@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Practice 3: Passwords</title>
 </head>
 <body>
     <h1>Password Practice!</h1>
@@ -31,13 +31,13 @@
                 output.style.color = "red";
                 output.innerHTML = "Passwords must be 8 characters or greater!"
             } else if (
-                password !== verify_password
+                password === verify_password
             ) {
-                output.style.color = "red";
-                output.innerHTML = "Passwords must be matching!"
-            } else {
                 output.style.color = "black";
                 output.innerHTML= "passwords match!"
+            } else {
+                output.style.color = "red";
+                output.innerHTML = "Passwords must be matching!"
             }
         }
     </script>
